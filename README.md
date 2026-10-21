@@ -37,49 +37,55 @@
 
 ### 1. [🚀 Lockheed DACS — Xưởng Lắp Ráp & Đánh Chặn Tên Lửa 3D](https://github.com/VuongQuocHoa/lockheed-dacs)
 > **Mô phỏng đồ họa 3D WebGL (Three.js), lắp ráp 6 mô-đun & Hệ thống xung lực ngang Lockheed Martin DACS**
+- 🌐 **Trải nghiệm Live Demo:** **[vuongquochoa.github.io/lockheed-dacs](https://vuongquochoa.github.io/lockheed-dacs/)** *(Không cần cài đặt, chạy ngay trên trình duyệt)*
 - **Đồ họa & Vật lý:** Xây dựng bằng **Three.js (WebGL)**, mô phỏng 6 bậc tự do, định luật dẫn đường tỷ lệ (Proportional Navigation), bẻ hướng siêu thanh bằng các vòi xả khí $O_2$ ngang DACS.
 - **Trải nghiệm game:** Cơ chế điều khiển camera TPS bẻ hướng theo chuột (chuẩn **PUBG / Free Fire** với Pointer Lock API), làm chậm thời gian **Bullet-Time 0.2x [Q]** và bộ tổng hợp âm thanh thủ tục bằng **WebAudio API**.
-- **Demo:** Mở trực tiếp [index.html](https://github.com/VuongQuocHoa/lockheed-dacs) hoặc chạy máy chủ Node.js (`npm start`).
 
 ### 2. [⚖️ Edge AI Predict Mass](https://github.com/VuongQuocHoa/predict-mass)
 > **Dự đoán khối lượng vật thể 3D qua Camera & AI học máy theo 5 giai đoạn công nghiệp**
+- 🌐 **Trải nghiệm Live Demo:** **[vuongquochoa.github.io/predict-mass](https://vuongquochoa.github.io/predict-mass/)** *(Tương tác trích xuất thể tích 3D & Benchmark INT8)*
 - **Điểm đột phá:** Kiến trúc **Decoupled Asynchronous Pipeline** tách luồng Camera Grabber (60 FPS) khỏi luồng AI Worker (35 FPS), triệt tiêu 100% độ trễ tích lũy khung hình (< 17ms latency).
-- **Thuật toán:** Phân đoạn mặt nạ YOLOv11n-seg, khớp Ellipse fitting, tính tỷ lệ Pixel-to-Metric (PPM) qua ArUco Marker 50mm, bù góc nghiêng quang học $\cos(\theta)$ và mạng nơ-ron hồi quy MLP 12 chiều đặc trưng.
-- **Tối ưu phần cứng:** Lượng tử hóa sau huấn luyện (PTQ) FP32 sang **INT8** bằng ONNX Runtime, giảm 50% RAM và tăng tốc 1.8x qua OpenVINO Execution Provider.
-- **Demo:** Giao diện Streamlit Dashboard thời gian thực (`app.py`) & script camera công nghiệp (`run_camera.py`).
+- **Thuật toán:** Phân đoạn mặt nạ YOLOv11n-seg, khớp Ellipse fitting, tính tỷ lệ Pixel-to-Metric (PPM), bù góc nghiêng quang học $\cos(\theta)$ và MLP 12 chiều.
+- **Tối ưu phần cứng:** Lượng tử hóa sau huấn luyện (PTQ) FP32 sang **INT8** bằng ONNX Runtime, giảm 50% RAM và tăng tốc 1.8x qua OpenVINO.
 
-### 2. [👁️ InsightFace FaceID CyberHUD](https://github.com/VuongQuocHoa/detect-face)
+### 3. [👁️ InsightFace FaceID CyberHUD](https://github.com/VuongQuocHoa/detect-face)
 > **Microservice nhận diện khuôn mặt FastAPI + ChromaDB Vector Storage + Android CyberHUD APK**
+- 🌐 **Trải nghiệm Live Demo:** **[vuongquochoa.github.io/detect-face](https://vuongquochoa.github.io/detect-face/)** *(Giao diện eKYC CyberHUD WebRTC)*
 - **Kiến trúc:** Dịch vụ REST API bất đồng bộ trích xuất 512D embedding bằng InsightFace (Buffalo_l), chuẩn hóa L2 và đối soát độ tương đồng Cosine Similarity trên ChromaDB Persistent Database.
 - **Client Di động:** Đóng gói ứng dụng độc lập **FaceID CyberHUD APK** cho điện thoại Android, tự động kết nối AI server qua mạng Wi-Fi nội bộ (LAN).
 - **Thuật toán ổn định:** Bộ lọc chống nhiễu *anti-ghosting* và *stranger pinning* chống rung giật khung hình khi người dùng di chuyển nhanh. Độ trễ nhận diện < 50ms/khuôn mặt.
 
-### 3. [🌾 MobiAgri — Quản Lý Vùng Nguyên Liệu](https://github.com/VuongQuocHoa/mobiagri-app)
+### 4. [🌾 MobiAgri — Quản Lý Vùng Nguyên Liệu](https://github.com/VuongQuocHoa/mobiagri-app)
 > **Nền tảng ERP nông nghiệp số hóa hộ canh tác và chuỗi cung ứng chuẩn VietGAP**
+- 🌐 **Trải nghiệm Live Demo:** **[vuongquochoa.github.io/mobiagri-app](https://vuongquochoa.github.io/mobiagri-app/)** *(Bảng điều khiển ERP & Truy xuất nguồn gốc QR)*
 - **Full-Stack Stack:** React 18 + Vite, Node.js Express, Prisma ORM, SQLite.
 - **Chức năng:** Số hóa hồ sơ nông hộ, quản lý nhật ký bón phân/phun thuốc BVTV, theo dõi chu kỳ mùa vụ, dự báo sản lượng và B2B Dashboard kết nối siêu thị, thương lái.
 
-### 4. [🤖 Coze AI Agent & Streaming Gateway](https://github.com/VuongQuocHoa/coze-agent)
+### 5. [🤖 Coze AI Agent & Streaming Gateway](https://github.com/VuongQuocHoa/coze-agent)
 > **Trợ lý AI Coze API v3: Web Chat đa phiên, Reverse Proxy chống CORS (Node.js & Vercel) & Số hóa nhật ký canh tác VietGAP**
+- 🌐 **Trải nghiệm Live Demo:** **[vuongquochoa.github.io/coze-agent](https://vuongquochoa.github.io/coze-agent/)** *(Web Chat Dark Mode thời gian thực)*
 - **Kiến trúc đa tầng:** Web SPA (TailwindCSS, Marked, Highlight.js) + Zero-Dependency Node.js Server (`server.js`, Hot-Reload `.env`) + Vercel Serverless Function (`api/coze.js`) + Python CLI Client (`chat.py`).
 - **Xử lý luồng thời gian thực:** Thuật toán khử trùng lặp (Deduplication) Server-Sent Events (SSE) giữa `delta` và `completed`, duy trì ngữ cảnh đa lượt hội thoại với `conversation_id`.
-- **Nghiệp vụ VietGAP:** Kịch bản đàm thoại chuyên biệt tự động hướng dẫn nông dân ghi chép và trích xuất thực thể canh tác [Cây trồng, Lô thửa, Hoạt động, Liều lượng, Người thực hiện].
 
-### 5. [⏱️ Chronos Pro Life OS](https://github.com/VuongQuocHoa/chronos-life-os)
+### 6. [⏱️ Chronos Pro Life OS](https://github.com/VuongQuocHoa/chronos-life-os)
 > **Hệ điều hành quản trị 1.440 phút trong ngày — 100/100 Google Lighthouse**
+- 🌐 **Trải nghiệm Live Demo:** **[vuongquochoa.github.io/chronos-life-os](https://vuongquochoa.github.io/chronos-life-os/)** *(Vòng tròn 24 giờ động)*
 - **Kiến trúc tinh gọn:** Pure Vanilla JavaScript ES6 Modules (Zero external dependencies), kích thước tải trang < 50KB.
 - **Trực quan hóa:** Vòng tròn 24 giờ tính toán góc lượng giác SVG/Canvas, cảm biến trình duyệt và Native Rule Engine Chatbot không độ trễ.
 
-### 6. [🎯 Shopee Deal Sniper & Scraper](https://github.com/VuongQuocHoa/shopee-deal-sniper)
+### 7. [🎯 Shopee Deal Sniper & Scraper](https://github.com/VuongQuocHoa/shopee-deal-sniper)
 > **Bot quét giá Flash Sale TMĐT đa luồng & bắn cảnh báo tức thời qua Telegram Webhook**
+- 🌐 **Trải nghiệm Live Demo:** **[vuongquochoa.github.io/shopee-deal-sniper](https://vuongquochoa.github.io/shopee-deal-sniper/)** *(Radar săn deal & Arbitrage Scorer)*
 - Thuật toán chấm điểm deal hời `filterAndScoreItems`, cơ chế tránh chặn IP và circular buffer 100 deals bảo vệ bộ nhớ RAM. Thông báo đến điện thoại < 3 giây.
 
-### 7. [💬 Facebook Fanpage AI Assistant](https://github.com/VuongQuocHoa/fb-ai-bot)
+### 8. [💬 Facebook Fanpage AI Assistant](https://github.com/VuongQuocHoa/fb-ai-bot)
 > **Trợ lý tư vấn bán hàng & tự động thu thập Lead tích hợp Google Gemini 1.5 Flash**
+- 🌐 **Trải nghiệm Live Demo:** **[vuongquochoa.github.io/fb-ai-bot](https://vuongquochoa.github.io/fb-ai-bot/)** *(Trình mô phỏng Messenger & Live Transaction Logs)*
 - Kết nối Messenger Graph API Webhook, phân tích nhu cầu và tự động chốt đơn / lấy số điện thoại khách hàng 24/7 kèm bảng điều khiển Live Transaction Logging.
 
-### 8. [📰 Autonomous Market News AI Agent](https://github.com/VuongQuocHoa/ai-market-agent)
+### 9. [📰 Autonomous Market News AI Agent](https://github.com/VuongQuocHoa/ai-market-agent)
 > **Agent tự động cào tin tài chính, tóm tắt thông minh qua LangChain & phát bản tin Telegram**
+- 🌐 **Trải nghiệm Live Demo:** **[vuongquochoa.github.io/ai-market-agent](https://vuongquochoa.github.io/ai-market-agent/)** *(Terminal phân tích tin tức tài chính & Telegram Dispatcher)*
 - Tự động quét RSS từ nhiều nguồn báo chí kinh tế, tinh gọn nội dung bằng mô hình ngôn ngữ lớn và lập lịch tự động bằng APScheduler.
 
 ---

@@ -35,7 +35,13 @@
 
 ## 🌟 Các Dự Án Thực Chiến Nổi Bật (Featured Engineering Projects)
 
-### 1. [⚖️ Edge AI Predict Mass](https://github.com/VuongQuocHoa/predict-mass)
+### 1. [🚀 Lockheed DACS — Xưởng Lắp Ráp & Đánh Chặn Tên Lửa 3D](https://github.com/VuongQuocHoa/lockheed-dacs)
+> **Mô phỏng đồ họa 3D WebGL (Three.js), lắp ráp 6 mô-đun & Hệ thống xung lực ngang Lockheed Martin DACS**
+- **Đồ họa & Vật lý:** Xây dựng bằng **Three.js (WebGL)**, mô phỏng 6 bậc tự do, định luật dẫn đường tỷ lệ (Proportional Navigation), bẻ hướng siêu thanh bằng các vòi xả khí $O_2$ ngang DACS.
+- **Trải nghiệm game:** Cơ chế điều khiển camera TPS bẻ hướng theo chuột (chuẩn **PUBG / Free Fire** với Pointer Lock API), làm chậm thời gian **Bullet-Time 0.2x [Q]** và bộ tổng hợp âm thanh thủ tục bằng **WebAudio API**.
+- **Demo:** Mở trực tiếp [index.html](https://github.com/VuongQuocHoa/lockheed-dacs) hoặc chạy máy chủ Node.js (`npm start`).
+
+### 2. [⚖️ Edge AI Predict Mass](https://github.com/VuongQuocHoa/predict-mass)
 > **Dự đoán khối lượng vật thể 3D qua Camera & AI học máy theo 5 giai đoạn công nghiệp**
 - **Điểm đột phá:** Kiến trúc **Decoupled Asynchronous Pipeline** tách luồng Camera Grabber (60 FPS) khỏi luồng AI Worker (35 FPS), triệt tiêu 100% độ trễ tích lũy khung hình (< 17ms latency).
 - **Thuật toán:** Phân đoạn mặt nạ YOLOv11n-seg, khớp Ellipse fitting, tính tỷ lệ Pixel-to-Metric (PPM) qua ArUco Marker 50mm, bù góc nghiêng quang học $\cos(\theta)$ và mạng nơ-ron hồi quy MLP 12 chiều đặc trưng.

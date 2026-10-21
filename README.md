@@ -59,10 +59,11 @@
 - **Full-Stack Stack:** React 18 + Vite, Node.js Express, Prisma ORM, SQLite.
 - **Chức năng:** Số hóa hồ sơ nông hộ, quản lý nhật ký bón phân/phun thuốc BVTV, theo dõi chu kỳ mùa vụ, dự báo sản lượng và B2B Dashboard kết nối siêu thị, thương lái.
 
-### 4. [⌚ Edu-Farm IoT Smart Wearable & Voice-to-Coze AI](https://github.com/VuongQuocHoa/coze-agent)
-> **Trợ lý ảo AI ghi chép nhật ký nông nghiệp rảnh tay bằng giọng nói tiếng Việt**
-- **Luồng dữ liệu:** Thu âm giọng nói $\rightarrow$ Speech-to-Text $\rightarrow$ **ByteDance Coze API v3 (SSE Streaming)** $\rightarrow$ Tự động trích xuất entities JSON [Thửa đất, Loại phân bón, Liều lượng] $\rightarrow$ Tự động đẩy vào **Google Sheets API**.
-- **Hiệu quả:** Giúp bà con nông dân ngoài đồng giảm 90% thời gian nhập liệu, hoàn thành chuẩn VietGAP chỉ với 1 câu nói.
+### 4. [🤖 Coze AI Agent & Streaming Gateway](https://github.com/VuongQuocHoa/coze-agent)
+> **Trợ lý AI Coze API v3: Web Chat đa phiên, Reverse Proxy chống CORS (Node.js & Vercel) & Số hóa nhật ký canh tác VietGAP**
+- **Kiến trúc đa tầng:** Web SPA (TailwindCSS, Marked, Highlight.js) + Zero-Dependency Node.js Server (`server.js`, Hot-Reload `.env`) + Vercel Serverless Function (`api/coze.js`) + Python CLI Client (`chat.py`).
+- **Xử lý luồng thời gian thực:** Thuật toán khử trùng lặp (Deduplication) Server-Sent Events (SSE) giữa `delta` và `completed`, duy trì ngữ cảnh đa lượt hội thoại với `conversation_id`.
+- **Nghiệp vụ VietGAP:** Kịch bản đàm thoại chuyên biệt tự động hướng dẫn nông dân ghi chép và trích xuất thực thể canh tác [Cây trồng, Lô thửa, Hoạt động, Liều lượng, Người thực hiện].
 
 ### 5. [⏱️ Chronos Pro Life OS](https://github.com/VuongQuocHoa/chronos-life-os)
 > **Hệ điều hành quản trị 1.440 phút trong ngày — 100/100 Google Lighthouse**
